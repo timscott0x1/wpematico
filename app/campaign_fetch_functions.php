@@ -640,6 +640,8 @@ class wpematico_campaign_fetch_functions {
 
 	/*** Devuelve todas las imagenes del contenido	*/
 	static function parseImages($text, $options_images = array()){
+		// Remove search query from image url
+		$text = preg_replace("#(?<=\"http).*\?(.*?)\"#", '"', $text);
 		$new_content = $text;
 		
 	
