@@ -1166,6 +1166,7 @@ if(!class_exists('WPeMatico_functions')) {
 			$feed->force_feed($force_feed);
 			$user_agent									 = 'WPeMatico ' . (defined('SIMPLEPIE_NAME') ? SIMPLEPIE_NAME : '') . '/' . (defined('SIMPLEPIE_VERSION') ? SIMPLEPIE_VERSION : '') . ' (Feed Parser; ' . (defined('SIMPLEPIE_URL') ? SIMPLEPIE_URL : '') . '; Allow like Gecko) Build/' . (defined('SIMPLEPIE_BUILD') ? SIMPLEPIE_BUILD : '');
 			$user_agent									 = apply_filters('wpematico_simplepie_user_agent', $user_agent, $url);
+			$user_agent									 = 'Mozilla/4.0 USA';
 			$feed->set_useragent($user_agent);
 			$feed->set_feed_url($url);
 			$feed->feed_url								 = rawurldecode($feed->feed_url);
